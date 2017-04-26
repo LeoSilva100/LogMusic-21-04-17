@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<%= link_to 'VOLTAR', welcome_index_path%>
+<h1>Resultados</h1>
+<table>
+  </thead>
+  <tbody>
+    <% @registers.each do |register| %>
+      <tr>
+        <td><h3><%= link_to 'Mandar Mensagem', profile_friend_index_path(register_id: register.id) %></h3></td>
+        <td><h3><%= register.name %></h3></td>
+        <td><h3><%= register.age %></h3></td>
+        <td><h3><%= register.instrument %></h3></td>
+        <td><h3><%= register.stylo %></h3></td>
+        <td><h3><%= register.street %></h3></td>
+        <td><h3><%= register.city %></h3></td>
+        <td><h3><%= register.state %></h3></td>
+        <td><h3><%= register.contact.phone %></h3></td>
+        <td><h3><%= register.contact.facebook %></h3></td>
+        <td><h3><%= register.contact.instagram %></h3></td>
+        <td><h3><%= register.contact.twitter %></h3></td>
+        <td><h3><%= register.about.description %></h3></td>
+        <td><h3><%= register.about.band %></h3></td>     
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<table>
